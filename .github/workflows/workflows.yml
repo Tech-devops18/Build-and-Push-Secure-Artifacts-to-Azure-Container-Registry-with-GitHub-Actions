@@ -4,7 +4,7 @@ on:
   push:
     branches: [ "main" ] # Helps prevent vulnerable code from landing on default branch
   pull_request:
-    branches: [ "main" ] # Shifts left: surfaces findings to reviewers before merge
+    branches: [ "main" ] # findings to reviewers before merge
   schedule:
     - cron: '24 1 * * 5' # Weekly re-scan (Fridays 01:24 UTC) to catch new CVEs on old images
 
