@@ -3,6 +3,7 @@
 FROM node:18-alpine AS deps
 WORKDIR /app
 COPY package.json package-lock.json* ./
+COPY . .
 # Install production dependencies only for a smaller final image.
 RUN npm ci --production
 
